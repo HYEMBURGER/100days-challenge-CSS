@@ -1,0 +1,101 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.frame {
+  width: 400px;
+  height: 400px;
+
+  background: #a5d9ae;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  text-shadow: rgb(212, 212, 212) 1px 0 6px;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 100px;
+  height: 7px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.ani1{
+  animation-name: line-1-ani;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.ani2{
+  animation-name: line-2-ani;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+}
+
+.ani3{
+  animation-name: line-3-ani;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+}
+
+/*animate*/
+
+@keyframes line-1-ani {
+  0% {
+    transform: translateY(0px) rotate(0);
+  }
+
+  50% {
+    transform: translateY(17px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(17px) rotate(45deg);
+  }
+}
+
+@keyframes line-2-ani {
+  0% {
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes line-3-ani {
+  0% {
+    transform: translateY(0px) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-17px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-17px) rotate(-45deg);
+  }
+}
