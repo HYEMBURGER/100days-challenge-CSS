@@ -35,27 +35,47 @@ body {
   background-color: white;
   border-radius: 10px;
   margin-bottom: 10px;
+  box-shadow: rgba(208, 213, 219, 0.2) 0px 8px 24px;
 }
 
 .ani1{
   animation-name: line-1-ani;
-  animation-duration: 2s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
 }
 
 .ani2{
   animation-name: line-2-ani;
-  animation-duration: 2s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
 
 }
 
 .ani3{
   animation-name: line-3-ani;
-  animation-duration: 2s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.ani1-rev{
+  animation-name: line-1-ani-rev;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.ani2-rev{
+  animation-name: line-2-ani-rev;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
 
 }
+
+.ani3-rev{
+  animation-name: line-3-ani-rev;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
 
 /*animate*/
 
@@ -97,5 +117,47 @@ body {
 
   100% {
     transform: translateY(-17px) rotate(-45deg);
+  }
+}
+
+/*reverse animation*/
+@keyframes line-1-ani-rev {
+  0% {
+    transform: translateY(17px) rotate(45deg);
+  }
+  
+  50% {
+    transform: translateY(17px) rotate(0);
+  }
+  
+  100% {
+    transform: translateY(0px) rotate(0);
+  }
+}
+
+@keyframes line-2-ani-rev {
+  0% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  100% {
+  }
+}
+
+@keyframes line-3-ani-rev {
+  0% {
+    transform: translateY(-17px) rotate(-45deg);
+  }
+  
+  50% {
+    transform: translateY(-17px) rotate(0);
+  }
+  
+  100% {
+    transform: translateY(0px) rotate(0);
   }
 }

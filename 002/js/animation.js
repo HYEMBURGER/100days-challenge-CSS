@@ -8,7 +8,15 @@ function animationEvent() {
     line1.classList.remove("ani1");
     line2.classList.remove("ani2");
     line3.classList.remove("ani3");
+
+    line1.classList.add("ani1-rev");
+    line2.classList.add("ani2-rev");
+    line3.classList.add("ani3-rev");
   } else {
+    line1.classList.remove("ani1-rev");
+    line2.classList.remove("ani2-rev");
+    line3.classList.remove("ani3-rev");
+
     line1.classList.add("ani1");
     line2.classList.add("ani2");
     line3.classList.add("ani3");
