@@ -1,0 +1,106 @@
+/*기초작업*/
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.frame {
+  width: 400px;
+  height: 400px;
+
+  background: #242b3d;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  text-shadow: rgb(212, 212, 212) 1px 0 6px;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.center {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(111, 111, 111);
+  border-radius: 50%;
+  box-shadow: rgba(86, 89, 91, 0.2) 0px 8px 24px;
+  overflow: hidden;
+}
+
+/**/
+.sky {
+  width: 200px;
+  height: 120px;
+  background-color: skyblue;
+}
+
+.land {
+  width: 200px;
+  height: 80px;
+  background-color: rgb(255, 203, 139);
+
+  position: relative;
+  top: 90px;
+}
+
+.sun {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: tomato;
+
+  position: relative;
+  top: 120px;
+  right: 10px;
+}
+
+.pyramid-1 {
+  width: 0;
+  height: 0;
+
+  position: relative;
+
+  bottom: 70px;
+  left: 55px;
+
+  border-bottom: 40px solid rgb(225, 225, 225);
+  border-top: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+
+}
+
+.pyramid-2 {
+  width: 0;
+  height: 0;
+
+  position: relative;
+  bottom: 150px;
+  left: 55px;
+
+
+  border-bottom: 40px solid white;
+  border-top: 40px solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 40px solid transparent;
+
+}
+
+@keyframes sunset {
+  0%{}
+  25%{}
+  50%{}
+  75%{}
+  100%{}
+}
