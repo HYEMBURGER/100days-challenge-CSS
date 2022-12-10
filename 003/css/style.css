@@ -63,6 +63,8 @@ body {
   position: relative;
   top: 120px;
   right: 10px;
+
+  animation: sunset 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
 .pyramid-1 {
@@ -98,9 +100,23 @@ body {
 }
 
 @keyframes sunset {
-  0%{}
-  25%{}
-  50%{}
-  75%{}
-  100%{}
+  0%{
+    top: 100px;
+  }
+  25%{
+    top: 40px;
+    right: -25px;
+  }
+  50%{
+    top: 20px;
+    right: -80px;
+  }
+  75%{
+    top: 40px;
+    right: -140px;
+  }
+  100%{
+    top: 120px;
+    right: -180px;
+  }
 }
