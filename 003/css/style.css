@@ -41,8 +41,28 @@ body {
 /**/
 .sky {
   width: 200px;
-  height: 120px;
+  height: 200px;
   background-color: skyblue;
+  position:relative;
+}
+
+.shadow {
+  width: 0;
+  height: 0;
+  position:absolute;
+  z-index: 2; /*가장앞으로*/
+
+  top: 120px;
+  left: 55px;
+
+  rotate: -180deg;
+
+  border-bottom: 40px solid rgba(149, 157, 165, 0.4);
+  border-top: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+
+  animation: moving-shadow 4s ease-out infinite;
 }
 
 .land {
@@ -50,30 +70,32 @@ body {
   height: 80px;
   background-color: rgb(255, 203, 139);
 
-  position: relative;
-  top: 90px;
+  position: absolute;
+  top: 120px;
 }
+
 
 .sun {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: tomato;
+  background-color: rgb(255, 186, 24);
 
-  position: relative;
+  left: -15px;
   top: 120px;
-  right: 10px;
 
-  animation: sunset 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  position: absolute;
+
+  animation: sunset 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
 .pyramid-1 {
   width: 0;
   height: 0;
 
-  position: relative;
+  position: absolute;
 
-  bottom: 70px;
+  top: 40px;
   left: 55px;
 
   border-bottom: 40px solid rgb(225, 225, 225);
@@ -87,8 +109,8 @@ body {
   width: 0;
   height: 0;
 
-  position: relative;
-  bottom: 150px;
+  position: absolute;
+  top: 40px;
   left: 55px;
 
 
@@ -101,22 +123,42 @@ body {
 
 @keyframes sunset {
   0%{
-    top: 100px;
+    left: -15px;
+    top: 120px;
   }
   25%{
-    top: 40px;
-    right: -25px;
+    top: 45px;
+    left: 25px;
   }
   50%{
-    top: 20px;
-    right: -80px;
+    top: 25px;
+    left: 70px;
   }
   75%{
-    top: 40px;
-    right: -140px;
+    top: 45px;
+    left: 130px;
   }
   100%{
-    top: 120px;
-    right: -180px;
+    top:120px;
+    left: 185px;
+  }
+}
+
+@keyframes moving-shadow {
+  0%{
+    border-left: 5px solid transparent;
+  }
+  25%{
+    left: 75px;
+    border-left: 20px solid transparent;
+  }
+  50%{
+    border-right: 40px solid transparent;
+  }
+  75%{
+    border-right: 20px solid transparent;
+  }
+  100%{
+    border-right: 5px solid transparent;
   }
 }
